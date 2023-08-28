@@ -11,17 +11,17 @@ string Text = "Что значит «Дан текст»? Как вы уже п�
                0123456
     T[0] = q
 */
-string Replase(string Text, char OldValue, char NewValue)
+string Replase(string Text, char OldValue, char NewValue) //char идентификатор символов
 {
     string result = String.Empty;
     int length = Text.Length;
     for (int i = 0; i < length; i ++)
     {
-        if (Text[i] == OldValue) 
+        if (Text[i] == OldValue) // условие если символ по индексу совпадает с аргументом, то к пустой стр доб-тся новое значение
             result = result + $"{NewValue}";
         
         else 
-            result = result + $"{Text[i]}";
+            result = result + $"{Text[i]}"; // если не совпадает с аргументом то к пустой строке добавляет старое значение
     }
     return result;
 }
