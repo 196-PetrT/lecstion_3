@@ -26,6 +26,6 @@ string Replase(string Text, char OldValue, char NewValue)
     return result;
 }
 string NewText = Replase(Text, ' ', '_');
-NewText = Replase(NewText, 'К', 'к');
+NewText = Replase(NewText, 'К', 'к'); // чтобы повторить метод просто переназначаем значение аргумента NewText
 NewText = Replase(NewText, 'с', 'С');
 Console.WriteLine(NewText);

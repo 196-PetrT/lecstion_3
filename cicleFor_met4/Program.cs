@@ -17,7 +17,7 @@ Console.WriteLine(abc);
 string Method4(int count, string Symb)
 {
     string result = ""; 
-    for (int i = 0, i < count,  i++)
+    for (int i = 0; i < count;  i++)
     {
         result = result + Symb;
     } 
