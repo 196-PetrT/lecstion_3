@@ -13,9 +13,23 @@ void PrintArray(int [] array)
     }
     Console.WriteLine(); // разделение между строками
 }
-// добавляем метод который упорядочиванет наш массив
+// добавляем метод который упорядочивает наш массив
 
+void SortMassiv(int [] array)
+{
+    for (int i = 0; i < array.Length - 1; i++) // -1 потому что в j мы добавили +1 к размерности массива
+    {
+        int MinPosition = i;
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[MinPosition]) MinPosition = j;
+        }
 
-
+        int temporary = array[i]; // temporary вносит в память значение индекса
+        array[i] = array[MinPosition]; // вместо значения индекса записывает мин значение
+        array[MinPosition] = temporary; // на мин значение записывает значение из памяти
+    }
+}
 PrintArray(array); 
-
+SortMassiv(array);
+PrintArray(array);
